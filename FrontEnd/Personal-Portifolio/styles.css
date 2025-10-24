@@ -1,0 +1,190 @@
+/* site.css */
+
+/* ============================================
+   TEMA CLARO (Padrão)
+   ============================================ */
+   :root {
+    /* Cores de fundo */
+    --background-color: #f5f3ff;
+    --background-secondary: #e9e5ff;
+    
+    /* Cores de texto */
+    --text-color: #1e1b4b;
+    --text-secondary: #4c1d95;
+    --text-color-hover: #5b21b6;
+    
+    /* Cores de acento (roxo/azul) */
+    --accent-primary: #7c3aed;
+    --accent-hover: #6d28d9;
+    --accent-active: #5b21b6;
+    
+    /* Cores secundárias (azul) */
+    --secondary-color: #3b82f6;
+    --secondary-hover: #2563eb;
+    
+    /* Bordas e divisores */
+    --border-color: #c4b5fd;
+    --border-light: #ddd6fe;
+    
+    /* Sombras */
+    --shadow-color: rgba(109, 40, 217, 0.1);
+}
+
+/* ============================================
+   TEMA ESCURO
+   ============================================ */
+[data-theme='dark'] {
+    /* Cores de fundo */
+    --background-color: #0f0a1e;
+    --background-secondary: #1a1333;
+    
+    /* Cores de texto */
+    --text-color: #e9e5ff;
+    --text-secondary: #c4b5fd;
+    --text-color-hover: #a78bfa;
+    
+    /* Cores de acento (roxo/azul) */
+    --accent-primary: #a78bfa;
+    --accent-hover: #c4b5fd;
+    --accent-active: #ddd6fe;
+    
+    /* Cores secundárias (azul) */
+    --secondary-color: #60a5fa;
+    --secondary-hover: #93c5fd;
+    
+    /* Bordas e divisores */
+    --border-color: #2e1065;
+    --border-light: #4c1d95;
+    
+    /* Sombras */
+    --shadow-color: rgba(167, 139, 250, 0.2);
+}
+
+/* ============================================
+   ESTILOS GLOBAIS COM ANINHAMENTO
+   ============================================ */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    transition: background-color 0.3s ease, color 0.3s ease;
+
+    header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1rem 2rem;
+        background-color: var(--background-secondary);
+        border-bottom: 2px solid var(--border-color);
+        box-shadow: 0 2px 8px var(--shadow-color);
+
+        img{
+            border-radius: 1.4rem;
+        }
+
+        nav {
+            ul {
+                display: flex;
+                gap: 2rem;
+                list-style-type: none;
+                justify-content: center;
+                align-items: center;
+                li {
+                    a {
+                        color: var(--text-color);
+                        text-decoration: none;
+                        font-weight: 500;
+                        padding: 0.5rem 1rem;
+                        border-radius: 8px;
+                        transition: all 0.3s ease;
+                        position: relative;
+
+                        &:hover {
+                            color: var(--text-color-hover);
+                            background-color: var(--background-color);
+
+                            &::after {
+                                width: 80%;
+                            }
+                        }
+
+                        &:active {
+                            transform: scale(0.95);
+                        }
+
+                        &::after {
+                            content: '';
+                            position: absolute;
+                            bottom: 0;
+                            left: 50%;
+                            width: 0;
+                            height: 2px;
+                            background-color: var(--accent-primary);
+                            transition: all 0.3s ease;
+                            transform: translateX(-50%);
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    main{
+        background-color: var(-background-color);
+    }
+
+    button, .btn {
+        background-color: var(--accent-primary);
+        color: white;
+        border: none;
+        padding: 0.75rem 1.5rem;
+        border-radius: 8px;
+        font-weight: 600;
+        cursor: pointer;
+        transition: all 0.3s ease;
+
+        &:hover {
+            background-color: var(--accent-hover);
+            box-shadow: 0 4px 12px var(--shadow-color);
+        }
+
+        &:active {
+            background-color: var(--accent-active);
+            transform: scale(0.98);
+        }
+
+        &.btn-secondary {
+            background-color: var(--secondary-color);
+
+            &:hover {
+                background-color: var(--secondary-hover);
+            }
+        }
+    }
+
+    .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 2rem;
+    }
+
+    .card {
+        background-color: var(--background-secondary);
+        border: 1px solid var(--border-color);
+        border-radius: 12px;
+        padding: 1.5rem;
+        box-shadow: 0 2px 8px var(--shadow-color);
+        transition: all 0.3s ease;
+
+        &:hover {
+            box-shadow: 0 4px 16px var(--shadow-color);
+            transform: translateY(-2px);
+        }
+    }
+}

@@ -1,0 +1,1 @@
+O objetivo deste projeto é ensinar-lhe como estilizar um site usando CSS. Você pegará a estrutura do projeto HTML-only anterior e aplicará várias técnicas CSS para melhorar sua aparência e capacidade de resposta.
