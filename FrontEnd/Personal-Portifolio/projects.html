@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="Alexandre Farias" />
-    <title>BasicPortifolio</title>
+    <title>Projects - BasicPortifolio</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -19,17 +19,52 @@
                 <li><a href="articles.html">Articles</a></li>
                 <li><a href="contact.html">Contact</a></li>
                 <li>
-                    
+                    <div class="toggle-theme" onclick="toggleTheme()">
+                        <svg id="sun_icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 24 24" >
+                            <path d="M12 4V2m0 20v-2m8-8h2M2 12h2m14.364 7.364 1.414 1.414M4.222 4.222l1.414 1.414m0 12.728L4.222 19.778m15.556-15.556-1.414 1.414M12 8a4 4 0 1 0 0 8 4 4 0 0 0 0-8Z" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+                          </svg>
+                        <svg id="moon_icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 24 24" style="display: none;">
+                            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79Z" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+                          </svg>
+                          
+                      </div> 
                 </li>
             </ul>
             
         </nav>
     </header>
-    <main>
-        <section>
-
+    <main style="display: flex; flex-direction: column; min-width: 100dvw; gap: 1rem; margin-bottom: 1rem;">
+        <h1 style="margin-left: 5rem;">Projects</h1>
+        <section style="margin-left: 10rem; margin-right: 10rem;">
+            <ul style="gap: 1rem; display: flex; flex-direction: column; list-style: none; ">
+                <li>
+                    <h2>HTML Only Portfolio</h2>
+                    <p>A simple portfolio built using only HTML to demonstrate structure and layout principles.</p>
+                </li>
+                <li>
+                    <h2>Calculator</h2>
+                    <p>A basic web-based calculator that performs arithmetic operations.</p>
+                </li>
+                <li>
+                    <h2>Quiz App</h2>
+                    <p>An interactive quiz app that tracks user score and displays results.</p>
+                </li>
+                <li>
+                    <h2>Countdown Timer</h2>
+                    <p>A timer that counts down from a specified time, useful for events and deadlines.</p>
+                </li>
+                <li>
+                    <h2>Product Upcoming Page</h2>
+                    <p>A product launch page displaying upcoming features and gathering user interest.</p>
+                </li>
+            </ul>
         </section>
     </main>
+    
+        <footer style="margin-bottom: 0;">
+            <hr style="opacity: 60%; width: 90%;">
+            <p>&copy; all rights reserved 2025</p>
+        </footer>
     <script src="script.js"></script>
 </body>
 </html>
