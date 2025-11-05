@@ -217,21 +217,6 @@ body {
                 &:hover {
                     border-color: var(--accent-hover);
                 }
-    
-                &:disabled {
-                    opacity: 0.6;
-                    cursor: not-allowed;
-                }
-    
-                &.error {
-                    border-color: #ef4444;
-                    box-shadow: 0 0 6px rgba(239, 68, 68, 0.4);
-                }
-    
-                &.success {
-                    border-color: #22c55e;
-                    box-shadow: 0 0 6px rgba(34, 197, 94, 0.3);
-                }
             }
 
             button{
@@ -250,27 +235,6 @@ body {
                     background-color: var(--accent-hover);
                     box-shadow: 0 4px 10px var(--shadow-color);
                     transform: translateY(-1px);
-                }
-    
-                &:active {
-                    background-color: var(--accent-active);
-                    transform: scale(0.97);
-                }
-    
-                &:disabled {
-                    opacity: 0.6;
-                    cursor: not-allowed;
-                    box-shadow: none;
-                    transform: none;
-                }
-    
-                &.secondary {
-                    background-color: var(--secondary-color);
-                    color: var(--text-color);
-    
-                    &:hover {
-                        background-color: var(--secondary-hover);
-                    }
                 }
             }
         }
