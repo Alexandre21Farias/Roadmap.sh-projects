@@ -1,0 +1,183 @@
+/* site.css */
+   :root {
+    /* Cores de fundo */
+    --background-color: #0f0a1e;
+    --background-secondary: #1a1333;
+    
+    /* Cores de texto */
+    --text-color: #e9e5ff;
+    --text-secondary: #c4b5fd;
+    --text-color-hover: #a78bfa;
+    
+    /* Cores de acento (roxo/azul) */
+    --accent-primary: #a78bfa;
+    --accent-hover: #c4b5fd;
+    --accent-active: #ddd6fe;
+    
+    /* Cores secundárias (azul) */
+    --secondary-color: #60a5fa;
+    --secondary-hover: #93c5fd;
+    
+    /* Bordas e divisores */
+    --border-color: #2e1065;
+    --border-light: #4c1d95;
+    
+    /* Sombras */
+    --shadow-color: rgba(167, 139, 250, 0.2);
+    
+}
+
+/* ============================================
+   TEMA ESCURO
+   ============================================ */
+[data-theme='light'] {
+    /* Cores de fundo */
+    --background-color: #f5f3ff;
+    --background-secondary: #e9e5ff;
+    
+    /* Cores de texto */
+    --text-color: #1e1b4b;
+    --text-secondary: #4c1d95;
+    --text-color-hover: #5b21b6;
+    
+    /* Cores de acento (roxo/azul) */
+    --accent-primary: #7c3aed;
+    --accent-hover: #6d28d9;
+    --accent-active: #5b21b6;
+    
+    /* Cores secundárias (azul) */
+    --secondary-color: #3b82f6;
+    --secondary-hover: #2563eb;
+    
+    /* Bordas e divisores */
+    --border-color: #c4b5fd;
+    --border-light: #ddd6fe;
+    
+    /* Sombras */
+    --shadow-color: rgba(109, 40, 217, 0.1);
+    
+}
+
+/* ============================================
+   ESTILOS GLOBAIS COM ANINHAMENTO
+   ============================================ */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, sub{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    gap: 4rem;
+    height: 100dvh;
+
+    main{
+        background-color: var(-background-color);
+        .card{
+            background-color: var(--background-secondary);
+            border: 1px solid var(--border-color);
+            min-width: 30rem;
+            border-radius: 12px;
+            padding: 1.5rem;
+            box-shadow: 0 2px 8px var(--shadow-color);
+            transition: all 0.3s ease;
+            height: 90dvh;
+            flex: 1;
+            
+            &:hover {
+                box-shadow: 0 4px 16px var(--shadow-color);
+                transform: translateY(-2px);
+            }
+
+            sub{
+                opacity: 40%;
+            }
+
+            section{
+               display: flex;
+               flex-direction: column;
+               overflow: scroll;
+               height: 30vdh;
+            }
+            .timeline {
+                position: relative;
+                margin: 20px 0;
+                padding: 0;
+                
+              }
+              
+              .timeline:before {
+                content: '';
+                position: absolute;
+                width: 2px;
+                background-color: var(--text-color);
+                top: 0;
+                bottom: 0;
+                left: 50%;
+                margin-left: -1px;
+              }
+              
+              .timeline-item {
+                margin-bottom: 20px;
+                position: relative;
+                width: calc(50% + 1px);
+                padding-right: 20px;
+                text-align: right;
+              }
+              
+              .timeline-item .timeline-date {
+                font-size: 0.9rem;
+                color: var(--text-accent-color);
+              }
+              
+              .timeline-item .timeline-content {
+                font-size: 1rem;
+                background-color: var(--background-color);
+                border-radius: 8px;
+                padding: 10px;
+                box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+                display: inline-block;
+              }
+              
+              .timeline-item:nth-child(even) {
+                left: calc(50% - 1px);
+                text-align: left;
+                padding-left: 20px;
+                padding-right: 0;
+              }
+              
+              .timeline-item:nth-child(even) .timeline-content {
+                margin-left: 0;
+              }
+              
+              .timeline-item:before {
+                content: '';
+                position: absolute;
+                width: 10px;
+                height: 10px;
+                right: -4px;
+                background-color: var(--text-color);
+                border-radius: 50%;
+                top: 10px;
+              }
+              
+              .timeline-item:nth-child(even):before {
+                left: -4px;
+                right: auto;
+              }
+        }
+        
+    }
+    
+}

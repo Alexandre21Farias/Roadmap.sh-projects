@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="script" href="script.js">
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+    const mapa = new Map();
+const obj = { nome: "Alex" };
+
+mapa.set(obj, "Usuário ativo");
+mapa.set("idade", 18);
+
+console.log(mapa.get(obj)); // "Usuário ativo"
+console.log(mapa.get("idade")); // 18
+console.log(mapa.size); // 2
+
+</script>
