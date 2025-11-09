@@ -8,7 +8,7 @@ Os projetos aqui listados foram feitos com base no caminho sugerido pelo [roadma
 
 - **[Single Page CV](https://roadmap.sh/projects/single-page-cv)**
 - **[Basic Html Website](https://roadmap.sh/projects/basic-html-website)**
-- **[Basic Html Website](https://roadmap.sh/projects/portfolio-websit)**
+- **[Basic Html Website](https://roadmap.sh/projects/portfolio-website)**
 
 
 
