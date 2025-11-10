@@ -85,97 +85,98 @@ body {
     main{
         background-color: var(-background-color);
         .card{
-            background-color: var(--background-secondary);
-            border: 1px solid var(--border-color);
-            min-width: 30rem;
-            border-radius: 12px;
-            padding: 1.5rem;
-            box-shadow: 0 2px 8px var(--shadow-color);
-            transition: all 0.3s ease;
-            height: 90dvh;
-            flex: 1;
+          background-color: var(--background-secondary);
+          border: 1px solid var(--border-color);
+          min-width: 30rem;
+          border-radius: 12px;
+          padding: 1.5rem;
+          box-shadow: 0 2px 8px var(--shadow-color);
+          transition: all 0.3s ease;
+          height: 90dvh;
+          flex: 1;
             
-            &:hover {
-                box-shadow: 0 4px 16px var(--shadow-color);
-                transform: translateY(-2px);
+          &:hover {
+              box-shadow: 0 4px 16px var(--shadow-color);
+              transform: translateY(-2px);
+          }
+
+          sub{
+              opacity: 40%;
+          }
+
+          section{
+              display: flex;
+              flex-direction: column;
+              overflow: scroll;
+              height: 30vdh;
+          }
+
+          .timeline {
+            position: relative;
+            margin: 20px 0;
+            padding: 0;
+
+            &::before{
+              content: '';
+              position: absolute;
+              width: 2px;
+              background-color: var(--border-light);
+              top: 0;
+              bottom: 0;
+              left: 50%;
+              margin-left: -1px;
             }
 
-            sub{
-                opacity: 40%;
+            .timeline-item {
+              margin-bottom: 20px;
+              position: relative;
+              width: calc(50% + 1px);
+              padding-right: 20px;
+              text-align: right;
+            }
+            
+            .timeline-item .timeline-date {
+              font-size: 0.9rem;
+              color: var(--text-secondary);
             }
 
-            section{
-               display: flex;
-               flex-direction: column;
-               overflow: scroll;
-               height: 30vdh;
+            .timeline-item .timeline-content {
+              font-size: 1rem;
+              background-color: var(--background-color);
+              border-radius: 8px;
+              padding: 10px;
+              box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+              display: inline-block;
             }
-            .timeline {
-                position: relative;
-                margin: 20px 0;
-                padding: 0;
-                
-              }
-              
-              .timeline:before {
-                content: '';
-                position: absolute;
-                width: 2px;
-                background-color: var(--text-color);
-                top: 0;
-                bottom: 0;
-                left: 50%;
-                margin-left: -1px;
-              }
-              
-              .timeline-item {
-                margin-bottom: 20px;
-                position: relative;
-                width: calc(50% + 1px);
-                padding-right: 20px;
-                text-align: right;
-              }
-              
-              .timeline-item .timeline-date {
-                font-size: 0.9rem;
-                color: var(--text-accent-color);
-              }
-              
-              .timeline-item .timeline-content {
-                font-size: 1rem;
-                background-color: var(--background-color);
-                border-radius: 8px;
-                padding: 10px;
-                box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
-                display: inline-block;
-              }
-              
-              .timeline-item:nth-child(even) {
-                left: calc(50% - 1px);
-                text-align: left;
-                padding-left: 20px;
-                padding-right: 0;
-              }
-              
-              .timeline-item:nth-child(even) .timeline-content {
-                margin-left: 0;
-              }
-              
-              .timeline-item:before {
-                content: '';
-                position: absolute;
-                width: 10px;
-                height: 10px;
-                right: -4px;
-                background-color: var(--text-color);
-                border-radius: 50%;
-                top: 10px;
-              }
-              
-              .timeline-item:nth-child(even):before {
-                left: -4px;
-                right: auto;
-              }
+
+            .timeline-item:nth-child(even) {
+              left: calc(50% - 1px);
+              text-align: left;
+              padding-left: 20px;
+              padding-right: 0;
+            }
+
+            .timeline-item:nth-child(even) .timeline-content {
+              margin-left: 0;
+            }
+
+            .timeline-item:nth-child(even):before {
+              left: -4px;
+              right: auto;
+            } 
+
+            .timeline-item:before {
+              content: '';
+              position: absolute;
+              width: 10px;
+              height: 10px;
+              right: -4px;
+              background-color: var(--border-light);
+              border-radius: 50%;
+              top: 10px;
+            }
+          }
+          
         }
         
     }
